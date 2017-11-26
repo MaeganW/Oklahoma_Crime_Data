@@ -47,14 +47,6 @@ class Chart extends Component {
   rape1 = this.byPopArr.map(d => d.FIELD5.replace(/\,/g,""));
   rape = this.rape1.map((d) => Number.parseInt(d));
 
-  // getData(arr, field){
-  //   // console.log('a', Object.prototype.toString.call(arr) == "[object Array]");
-  //   const newArr = arr.map(d => d.field);
-  //   const noCommasArr = arr.forEach(d => d.replace(/\,/g,""))
-  //   // const noCommasArr = arr.forEach(d => d.field.replace(/\,/g,""));
-  //   return noCommasArr.map((d) => Number.parseInt(d));
-  // }
-
   initChart(){
     const chart = c3.generate({
       bindto: '#chart',
@@ -64,7 +56,6 @@ class Chart extends Component {
       },
       data: {
         columns: [
-          // ['Population', ...this.population],
           ['Burglary', ...this.burglary],
           ['Property Crime', ...this.propertyCrime],
           ['Vehicle Theft', ...this.vehicleTheft],
@@ -76,10 +67,6 @@ class Chart extends Component {
           ['Aggravated Assault', ...this.aggravatedAssault],
           ['Rape', ...this.rape]
         ],
-        // axes: {
-        //   data1: 'y',
-        //   data2: 'y2'
-        // },
         groups: [
           ['Property Crime', 'Burglary', 'Vehicle Theft', 'Larceny', 'Robbery']
         ],
@@ -103,15 +90,6 @@ class Chart extends Component {
             position: 'outer-middle'
           }
         },
-        // y2: {
-        //   padding: {top:5, bottom:0},
-        //   show: true,
-        //   label: {
-        //       text: 'Population',
-        //       position: 'outer-middle'
-        //   },
-        //   inverted: true
-        // }
       },
       bar: {
         width: {
