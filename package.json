@@ -2,7 +2,7 @@
   "name": "ok_crime_data",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/MaeganW.github.io/Oklahoma_Crime_Data",
+  "homepage": "https://maeganw.github.io/Oklahoma_Crime_Data",
   "dependencies": {
     "c3": "^0.4.18",
     "d3": "^4.12.0",
